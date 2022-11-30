@@ -24,9 +24,12 @@
             })    
           },
           addTask() {
-               
-           // console.log(this.userTask)
-              axios.post('./server.php', this.userTask, { Headers: { 'Content-Type' :  'multipart/form-data' } }).then((res) => {
+           
+              console.log(this.userTask.text)
+              
+              let data = new FormData();
+              data.append('text', this.userTask.text)
+              axios.post('./server.php', data).then((res) => {
                   console.log(res.data)
               })
           },
