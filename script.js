@@ -13,18 +13,22 @@
           getData() {
               axios.get('./server.php').then((res) => {
                   
+                    console.log(res.data)
                   this.dati = res.data
                   console.log(this.dati)
-                  console.log(this.userTask)
+             
                   
             })    
           },
           addTask(string) {
               console.log(string)
-              axios.post('./server.php', this.userTask, { Headers: { 'Content-Type' :  'multipart/form-data' } }).then((res) => {
+              axios.post('./server.php', string, { Headers: { 'Content-Type' :  'multipart/form-data' } }).then((res) => {
                   console.log('fatto')
               })
           },
+mounted() {
+    getData() 
+},
 
       },
   }).mount('#app')
