@@ -23,9 +23,9 @@ session_start();
         <div v-for="(data) in dati">
             <p :class=" data.done == true ? 'fatta' : 'daFare'">{{ data.text}}</p>
         </div>
-        <input type="text" v-model="userTask.text" name="userTask">
+        <input type="text" v-model="userTask.text" name="text">
         <button @click="getData()">lancia</button>
-        <button @click="addTask(userTask)">add</button>
+        <button @click="addTask()">add</button>
     </div>
 </body>
 
