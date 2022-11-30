@@ -6,7 +6,7 @@ $good = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JS
 // $good would be ["€","http://example.com/some/cool/page",337]
 $dati = file_get_contents('data.json');
 $datiuse = json_decode($dati, true);
-
+var_dump($_POST);
 // var_dump($dati);
 // var_dump($datiuse);
 
