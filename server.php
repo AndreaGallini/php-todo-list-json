@@ -9,7 +9,7 @@ $datiuse = json_decode($dati, true);
 var_dump($_POST);
 if (isset($_POST)) {
     $userTask = [
-        'text' => $_POST,
+        'text' => $_POST['userTask'],
         'done' => 'false'
     ];
     $dati = json_decode($dati, true);
