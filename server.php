@@ -6,7 +6,6 @@ $good = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JS
 $dati = file_get_contents('data.json');
 // var_dump($dati);
 $datiuse = json_decode($dati, true);
-var_dump($_POST);
 
 // if (!empty($_POST)) {
 //     $userTask = [
@@ -22,4 +21,4 @@ var_dump($_POST);
 // var_dump($dati);
 // var_dump($datiuse);
 
-return json_encode($datiuse);
+echo json_encode($datiuse);

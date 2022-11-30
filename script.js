@@ -25,13 +25,13 @@
           },
           addTask() {
                
-            console.log(this.userTask)
+           // console.log(this.userTask)
               axios.post('./server.php', this.userTask, { Headers: { 'Content-Type' :  'multipart/form-data' } }).then((res) => {
                   console.log(res.data)
               })
           },
       },
-    //   mounted() {
-    //       this.getData();
-    //   },
+      mounted() {
+          this.getData();
+      },
   }).mount('#app')

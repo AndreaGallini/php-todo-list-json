@@ -20,13 +20,17 @@ session_start();
 
 <body>
     <div id="app">
-        <div v-for="(data) in dati">
-            <p :class=" data.done == true ? 'fatta' : 'daFare'">{{ data.text}}</p>
+        <div class="container">
+            <div v-for="(data) in dati">
+                <p :class=" data.done == true ? 'fatta' : 'daFare'">{{ data.text}}</p>
+            </div>
+            <!-- <input type="text" v-model="userTask.text" name="text">
+            <button @click="getData()">lancia</button>
+            <button @click="addTask()">add</button> -->
         </div>
-        <input type="text" v-model="userTask.text" name="text">
-        <button @click="getData()">lancia</button>
-        <button @click="addTask()">add</button>
+
     </div>
+
 </body>
 
 </html>
