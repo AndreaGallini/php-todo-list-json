@@ -16,12 +16,12 @@
           getData() {
               axios.get('./server.php').then((res) => {
                   
-                    console.log(res)
+                  console.log(res)
                   this.dati = res.data
                   console.log(this.dati)
              
                   
-            })    
+              })
           },
           addTask() {
            
@@ -31,10 +31,12 @@
               data.append('text', this.userTask.text)
               axios.post('./server.php', data).then((res) => {
                   console.log(res.data)
+                  this.getData()
               })
           },
+
       },
       mounted() {
-          this.getData();
+          this.getData('./server.php',);
       },
   }).mount('#app')

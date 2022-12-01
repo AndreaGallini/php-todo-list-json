@@ -21,7 +21,7 @@ session_start();
 <body>
     <div id="app">
         <div class="container">
-            <div v-for="(data) in dati">
+            <div v-for="(data,index) in dati">
                 <p :class=" data.done == true ? 'fatta' : 'daFare'">{{ data.text}}</p>
             </div>
             <input type="text" v-model="userTask.text" name="text">

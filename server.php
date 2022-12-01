@@ -18,7 +18,8 @@ if (!empty($_POST)) {
     file_put_contents('data.json', json_encode($dati));
 
 }
+echo json_encode($datiuse);
+
+
 // var_dump($dati);
 // var_dump($datiuse);
-
-echo json_encode($datiuse);
